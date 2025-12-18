@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cave Explorer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Start overlay (user gesture required for audio) -->
+<div id="startOverlay">
+  <div id="startBox">
+    <h1>GALLATIN FINAL PROJECT</h1>
+    <p>You are a troglobite exploring the darkness.<br>
+       Move your mouse to use your torch. Click objects to examine them.<br>
+       Click ENTER to begin your journey.</p>
+
+    <div id="profileSelection">
+      <p>Who are you?</p>
+      <div class="profiles">
+        <button class="profile" data-name="Paula">👤 Paula</button>
+        <button class="profile" data-name="Mahé">👤 Mahé</button>
+        <button class="profile" data-name="Alex">👤 Alex</button>
+        <button class="profile" data-name="Ana Julia">👤 Ana Julia</button>
+        <button class="profile" data-name="Aurielle">👤 Aurielle</button>
+        <button class="profile" data-name="Daniel">👤 Daniel</button>
+        <button class="profile" data-name="Eddie">👤 Eddie</button>
+        <button class="profile" data-name="Kiran">👤 Kiran</button>
+        <button class="profile" data-name="Nico">👤 Nico</button>
+        <button class="profile" data-name="Paula">👤 Paula</button>
+        <button class="profile" data-name="takato">👤 takato</button>
+        <button class="profile" data-name="Pr. Holmberg">👤 Pr. Holmberg</button>
+      </div>
+    </div>
+
+    <!-- SINGLE welcome message container, below profiles -->
+    <div id="welcomeMessage" class="hidden"></div>
+
+    <button id="enterBtn">ENTER</button>
+  </div>
+</div>
+
+  <!-- Title & info -->
+  <div id="hud">
+    <div id="title">CAVES</div>
+    <div id="hint">Mouse = torch · Click = inspect</div>
+  </div>
+
+  <!-- Info card -->
+  <div id="infoCard" class="hidden">
+    <button id="closeInfo" aria-label="close">×</button>
+    <h2 id="infoTitle"></h2>
+    <p id="infoText"></p>
+  </div>
+
+  <!-- canvas -->
+  <canvas id="c"></canvas>
+
+  <!-- three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- app -->
+  <script src="script.js"></script>
+</body>
+</html>
